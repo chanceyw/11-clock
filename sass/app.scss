@@ -1,0 +1,51 @@
+@import "bourbon";
+@import "neat";
+@import "mixins";
+@import "normalize";
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+@import "font-awesome";
+
+
+
+.clock {
+ text-align: center;
+  font-size: 85px;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.progress {
+
+  display: block;
+  content: '';
+  background: white;
+  width: 60px;
+  height: 3px;
+  max-width: 600px;
+  border-radius: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Averia Sans Libre', cursive;
+}
+.color {
+  display: none;
+}
+
+.container:hover {
+.color {
+   display: block;
+   font-size: 48px;
+  }
+
+  .clock {
+    display: none;
+  }
+}
