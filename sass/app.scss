@@ -8,9 +8,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 
 
 .clock {
-
-
-  text-align: center;
+ text-align: center;
   font-size: 85px;
 }
 .parent {
@@ -23,15 +21,30 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 
 
 .progress {
+  align-items: center;
   display: block;
   content: '';
-  background: green;
+  background: white;
   width: 50px;
-  height: 25px;
+  height: 3px;
   max-width: 600px;
+  border-radius: 15px;
 }
 
 body {
   margin: 0;
   font-family: 'Averia Sans Libre', cursive;
 }
+
+.color{
+  display: none;
+
+.container:hover {
+.color {
+   display: block;
+ }
+ .time {
+   display: none;
+ }
+ }
+  }

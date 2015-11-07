@@ -1,6 +1,8 @@
 (function() {
   var clock = document.querySelector('.clock');
   var progress = document.querySelector('.progress');
+  var parentColor = document.querySelector('.parent');
+  var mainColor = document.querySelector('color');
   var startTime = new Date();
   console.log('First load', startTime);
   window.setInterval(time, 1000);
@@ -11,19 +13,17 @@
     var nowSec = padZeros(currentTime.getSeconds());
     var nowMin = padZeros(currentTime.getMinutes());
     var nowHour = padZeros(currentTime.getHours());
-
     clock.innerHTML = `${nowHour}:${nowMin}:${nowSec}`;
 
-    console.log(nowSec / 60);
     progress.style.width = nowSec / 60 * 25 + '%';
 
     var secColor = colorSpan(nowSec, 60);
     var minColor = colorSpan(nowMin, 60);
     var hourColor = colorSpan(nowHour, 60);
-    console.log(secColor);
-    console.log(minColor);
-    console.log(hourColor);
-    debugger;
+    var colorSeek = `rgb(${secColor}, ${minColor}, ${hourColor})`;
+
+    parentColor.style.background = colorSeek;
+    colorSpan.innerHTML = colorSeek;
 
   }
 
