@@ -8,8 +8,8 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 
 
 .clock {
- flex: 1;
-  margin: 0;
+
+
   text-align: center;
   font-size: 85px;
 }
@@ -28,6 +28,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
   background: green;
   width: 50px;
   height: 25px;
+  max-width: 600px;
 }
 
 body {
