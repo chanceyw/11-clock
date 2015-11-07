@@ -2,7 +2,7 @@
   var clock = document.querySelector('.clock');
   var progress = document.querySelector('.progress');
   var parentColor = document.querySelector('.parent');
-  var colorSpan = document.querySelector('.color');
+  var colorSpan = document.querySelector('color');
   var startTime = new Date();
   console.log('First load', startTime);
   window.setInterval(time, 1000);
@@ -20,10 +20,10 @@
     var secColor = colorSpan(nowSec, 60);
     var minColor = colorSpan(nowMin, 60);
     var hourColor = colorSpan(nowHour, 60);
-    var toColorRange = `rgb(${secColor}, ${minColor}, ${hourColor})`;
+    var colorSeek = `rgb(${secColor}, ${minColor}, ${hourColor})`;
 
-    parentColor.style.background = toColorRange;
-    colorSpan.innerHTML = toColorRange;
+    parentColor.style.background = colorSeek;
+    colorSpan.innerHTML = colorSeek;
 
   }
 
@@ -35,7 +35,7 @@
     return time;
   }
 
-  var colorSpan = (digit, span) => {
+  var toColorRange = (digit, span) => {
     return Math.floor(digit / span * 255);
   };
 
