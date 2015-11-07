@@ -35,16 +35,16 @@ body {
   margin: 0;
   font-family: 'Averia Sans Libre', cursive;
 }
-
-.color{
+color {
   display: none;
+}
 
 .container:hover {
 .color {
    display: block;
- }
- .time {
-   display: none;
- }
- }
   }
+
+  .time {
+    display: none;
+  }
+}
