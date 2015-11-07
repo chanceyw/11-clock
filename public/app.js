@@ -2,7 +2,7 @@
   var clock = document.querySelector('.clock');
   var progress = document.querySelector('.progress');
   var parentColor = document.querySelector('.parent');
-  var colorSpan = document.querySelector('color');
+  var mainColor = document.querySelector('color');
   var startTime = new Date();
   console.log('First load', startTime);
   window.setInterval(time, 1000);
@@ -17,13 +17,13 @@
 
     progress.style.width = nowSec / 60 * 25 + '%';
 
-    var secColor = colorSpan(nowSec, 60);
-    var minColor = colorSpan(nowMin, 60);
-    var hourColor = colorSpan(nowHour, 60);
+    var secColor = toColorRange(nowSec, 60);
+    var minColor = toColorRange(nowMin, 60);
+    var hourColor = toColorRange(nowHour, 60);
     var colorSeek = `rgb(${secColor}, ${minColor}, ${hourColor})`;
 
     parentColor.style.background = colorSeek;
-    colorSpan.innerHTML = colorSeek;
+    mainColor.innerHTML = colorSeek;
 
   }
 
